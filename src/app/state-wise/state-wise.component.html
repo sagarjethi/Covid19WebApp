@@ -1,0 +1,21 @@
+<h3 class="text-center">STATE WISE LIST</h3>
+<div class="my-custom-scrollbar">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <th>State</th>
+      <th>Confirmed</th>
+      <th>Active</th>
+      <th>Recovered</th>
+      <th>Deceased</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sd of stateData">
+        <td class="text-uppercase" *ngIf="sd.confirmed>0">{{sd.state}}</td>
+        <td class="text-primary" *ngIf="sd.confirmed>0">{{sd.confirmed}}</td>
+        <td class="text-danger" *ngIf="sd.confirmed>0">{{sd.active}}</td>
+        <td class="text-success" *ngIf="sd.confirmed>0">{{sd.recovered}}</td>
+        <td class="text-secondary" *ngIf="sd.confirmed>0">{{sd.deaths}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
